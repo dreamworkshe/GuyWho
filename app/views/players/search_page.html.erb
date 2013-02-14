@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>
+  <%= form_tag(search_players_path, :method => "get", :id => "search_box") do %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search", :id => "search_button") %>
+  <% end %>
+  </h1>
+
+  <div id="results">
+  </div>
+</div>
+
+<script>initSearchPage();</script>

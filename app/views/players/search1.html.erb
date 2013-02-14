@@ -1,0 +1,8 @@
+
+
+
+<% if not @players.empty? %>
+  <% @players.each do |player| %>
+    <h1><%= player.first_name + " " + player.last_name %><h1>
+  <% end %>
+<% end %>
