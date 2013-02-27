@@ -64,4 +64,5 @@ GuyWho::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  ENV['WEBSOLR_URL'] = 'http://ec2-west.websolr.com/solr/b08a0ccc9f2'
 end
