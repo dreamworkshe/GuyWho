@@ -40,9 +40,11 @@ function SearchBoxHandler() {
 
   // Send query to server and get results
   var getResults = function(query) {
+    $('#results_container').spin(spinneropts);
     $('#results').html('');
     search_request = $.getJSON("/players/search", {query: query}, function(data) {
       updatePlayerList(data);
+      $('#results_container').spin(false);
       search_running = false;
     });
   };
