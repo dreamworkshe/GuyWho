@@ -1,8 +1,11 @@
 GuyWho::Application.routes.draw do
+  root :to => 'players#search_page'
+
   resources :players do
     collection do
       get 'search_page'
       get 'search'
+      get 'get_info'
     end
   end
   # The priority is based upon order of creation:

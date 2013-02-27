@@ -1,12 +1,19 @@
 <div class="container">
-  <h1>
+  <center><br><h3>Looking for a player?</h3></center>
   <%= form_tag(search_players_path, :method => "get", :id => "search_box") do %>
-    <%= text_field_tag(:query) %>
+    <%= text_field_tag(:query, nil, :placeholder => "Harden Houston, Clippers #32, Thunders sefolosaaaaa...") %>
     <%= submit_tag("Search", :id => "search_button") %>
   <% end %>
-  </h1>
 
-  <div id="results">
+  <div class="row">
+    <div class="span1"></div>
+    <div class="span4">
+      <ul class="nav nav-pills nav-stacked" id="results"></ul>
+    </div>
+    <div class="span1"></div>
+    <div class="span5">
+      <div id="information_container"><div id="information"></div></div>
+    </div>
   </div>
 </div>
 
